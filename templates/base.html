@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% include 'snippets/head.html' %}
+
+<body>
+
+	{% include 'snippets/header.html' %}
+
+
+	{% include 'snippets/search_overlay.html' %}
+
+	{% block content %}
+    
+    {% endblock content %}
+
+	{% include 'snippets/footer.html' %}
+
+
+
+	{% include 'snippets/scripts.html' %}
+
+
+</body>
+
+</html>
