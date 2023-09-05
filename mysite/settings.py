@@ -22,6 +22,13 @@ ALLOWED_HOSTS = [
 ]
 
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "dtgsyoh3j",
+    "API_KEY": "875443265234375",
+    "API_SECRET": "RnT-EsyBJRt1SXvy0-7kuG8hgC0",
+}
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -30,13 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "cloudinary_storage",
     "django.contrib.staticfiles",
+    "cloudinary",
     "core.apps.CoreConfig",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -118,14 +126,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATICFILES_DIRS = [BASE_DIR / "static", BASE_DIR / "media"]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 STATIC_URL = "/static/"
-MEDIA_URL = "/media/"
-STATIC_ROOT = BASE_DIR / "static_cdn"
-MEDIA_ROOT = BASE_DIR / "media_cdn"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+STATICFILES_STORAGE = "cloudinary_storage.storage.StaticHashedCloudinaryStorage"
