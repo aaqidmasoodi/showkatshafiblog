@@ -11,13 +11,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "aa9180815a8bd2c5de57d5daff767cd5633b5a963881a6bfdefabe2cb34c05e0a0e669e48"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '.vercel.app', 
-    '.now.sh', 
-    'www.showkatshafi.com',
-    'showkatshafi.com',
+    ".vercel.app",
+    ".now.sh",
+    "www.showkatshafi.com",
+    "showkatshafi.com",
+    "127.0.0.1",
 ]
 
 
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -71,13 +73,13 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'clkjiycp',
-        'USER': 'clkjiycp',
-        'PASSWORD': 'iAH125s7aAH8oNBjrpkyOQ3SYY_UYHDt',
-        'HOST': 'satao.db.elephantsql.com',
-        'PORT': '5432'
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "clkjiycp",
+        "USER": "clkjiycp",
+        "PASSWORD": "iAH125s7aAH8oNBjrpkyOQ3SYY_UYHDt",
+        "HOST": "satao.db.elephantsql.com",
+        "PORT": "5432",
     }
 }
 
@@ -126,3 +128,4 @@ MEDIA_ROOT = BASE_DIR / "media_cdn"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
