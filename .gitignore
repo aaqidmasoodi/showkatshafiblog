@@ -49,8 +49,6 @@ atlassian-ide-plugin.xml
 *.py[cod] 
 *$py.class 
 
-# Django Static
-static/
 
 # Distribution / packaging 
 .Python build/ 
