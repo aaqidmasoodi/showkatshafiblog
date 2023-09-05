@@ -13,7 +13,12 @@ SECRET_KEY = "aa9180815a8bd2c5de57d5daff767cd5633b5a963881a6bfdefabe2cb34c05e0a0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.vercel.app', 
+    '.now.sh', 
+    'www.showkatshafi.com',
+    'showkatshafi.com',
+]
 
 
 # Application definition
