@@ -30,3 +30,9 @@ $(document).ready(function(){
         } 
     });
 });
+
+
+window.addEventListener('load', function () {
+    // Add the 'loaded' class to the body, which hides the preloader
+    document.body.classList.add('loaded');
+});

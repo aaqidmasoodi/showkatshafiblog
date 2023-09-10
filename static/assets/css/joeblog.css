@@ -11779,3 +11779,38 @@ section .section-secondary-title {
   opacity: .7;
   margin-bottom: 15px;
 }
+
+
+/* Preloader Styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Background color for the preloader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the preloader is on top of other content */
+}
+
+/* Loading Animation Styles (You can customize this) */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db; /* Color of the loading spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide the preloader once the content is loaded */
+body.loaded .preloader {
+  display: none;
+}
