@@ -19,7 +19,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Categories
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'home' %}">Action</a>
@@ -29,15 +29,15 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#">Premium Content <i class="fas fa-crown"></i></a>
                 </li>
             </ul>
             <div class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="{% url 'home' %}" class="ml-4 btn btn-primary mt-1 btn-sm">Already a Member? Login</a>
+                    <a href="{% url 'members-login' %}" class="ml-4 btn btn-primary mt-1 btn-sm">Already a Member? Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'home' %}" class="ml-4 btn btn-dark mt-1 btn-sm">Become a Member</a>
+                    <a href="{% url 'members-signup' %}" class="ml-4 btn btn-dark mt-1 btn-sm">Become a Member</a>
                 </li>
             </div>
         </div>

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cloudinary",
     "core.apps.CoreConfig",
+    "members.apps.MembersConfig",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,6 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             BASE_DIR / "templates",
-            BASE_DIR / "core/templates",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
