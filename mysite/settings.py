@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "aa9180815a8bd2c5de57d5daff767cd5633b5a963881a6bfdefabe2cb34c05e0a0e669e48"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     ".vercel.app",
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     "cloudinary",
     "core.apps.CoreConfig",
     "members.apps.MembersConfig",
+    "ckeditor",
 ]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

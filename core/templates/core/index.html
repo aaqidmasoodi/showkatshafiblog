@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block content %}
+
+
 <div class="container">
+    
     <section>
         <div class="feature-posts">
             <a href="single-post.html" class="feature-post-item">                       
@@ -26,6 +29,15 @@
             </a>
         </div>
     </section>
+
+    <hr>
+    <form>
+        <div class="form-group">
+          <label for="searchbox">Search the Blog</label>
+          <input type="text" class="form-control" id="searchbox">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
     <hr>
     <div class="page-container">
         <div class="page-content">
