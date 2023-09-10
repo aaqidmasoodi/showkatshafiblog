@@ -1,11 +1,8 @@
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "aa9180815a8bd2c5de57d5daff767cd5633b5a963881a6bfdefabe2cb34c05e0a0e669e48"
@@ -28,8 +25,6 @@ CLOUDINARY_STORAGE = {
     "API_SECRET": "RnT-EsyBJRt1SXvy0-7kuG8hgC0",
 }
 
-
-# Application definition
 
 INSTALLED_APPS = [
     "django.contrib.admin",
