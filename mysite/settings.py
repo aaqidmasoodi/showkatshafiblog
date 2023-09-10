@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "aa9180815a8bd2c5de57d5daff767cd5633b5a963881a6bfdefabe2cb34c05e0a0e669e48"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     ".vercel.app",
