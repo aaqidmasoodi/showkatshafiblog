@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,9 @@
    <meta name="author" content="Devcrud">
    <title>JoeBLog | Components</title>
    <!-- font icons -->
-   <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+   <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
    <!-- Bootstrap + Steller  -->
-   <link rel="stylesheet" href="assets/css/joeblog.css">
+   <link rel="stylesheet" href="{% static 'assets/css/joeblog.css' %}">
 </head>
 <body>
 
@@ -882,8 +883,8 @@
     <!-- End of Page Footer -->
    
    <!-- core  -->
-   <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-   <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+   <script src="{% static 'assets/vendors/jquery/jquery-3.4.1.js' %}"></script>
+   <script src="{% static 'assets/vendors/bootstrap/bootstrap.bundle.js' %}"></script>
 
 </body>
 </html>

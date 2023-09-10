@@ -6,7 +6,16 @@ def home_view(request):
 
 
 def about_view(request):
-    return render(request, 'core/about.html')
+    return render(request, "core/about.html")
 
-def contact_view(request):
-    return render(request, 'core/contact.html')
+
+def blog_view(request):
+    return render(request, "core/blog.html")
+
+
+def theme_view(request):
+    return render(request, "components.html")
+
+
+def post_view(request):
+    return render(request, "core/post.html")
