@@ -3,8 +3,14 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with JoeBLog landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Showkat Shafi</title>
+    <meta name="author" content="Showkat Shafi">
+
+    
+    {% block meta_description %}
+        <meta name="description" content="My Odyssey Echoes - Showkat Shafi's personal blog.">
+    {% endblock meta_description %}
+    <title>Showkat Shafi's Blog | My Odyssey Echoes</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/favicon.ico' %}">
     <!-- font icons -->
     <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
     <!-- Bootstrap + JoeBLog main styles -->
