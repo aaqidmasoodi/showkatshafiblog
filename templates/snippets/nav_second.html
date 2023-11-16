@@ -33,12 +33,19 @@
                 </li>
             </ul>
             <div class="navbar-nav ml-auto">
+                
+                {% if not request.user.is_authenticated %}
                 <li class="nav-item">
                     <a href="{% url 'members-login' %}" class="ml-4 btn btn-primary mt-1 btn-sm">Already a Member? Login</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'members-signup' %}" class="ml-4 btn btn-dark mt-1 btn-sm">Become a Member</a>
                 </li>
+                {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'members-logout' %}" class="ml-4 btn btn-outline-dark mt-1 btn-sm">Logout</a>
+                </li>
+                {% endif %}
             </div>
         </div>
     </div>
